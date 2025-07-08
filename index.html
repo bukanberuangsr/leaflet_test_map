@@ -33,11 +33,11 @@
     <div id="map"></div>
     <div class="map-legend shadow-sm border border-dark border-2 radius">
         <h6 class="">Legenda</h6>
-        <label for="" class="form-check-label"><input type="checkbox" name="toggle" id="border_toggle" class="form-check-input" checked> Border</label><br>
+        <label for="" class="form-check-label"><input type="checkbox" name="toggle" id="polygon_toggle" class="form-check-input" checked> Border</label><br>
         <label for="" class="form-check-label"><input type="checkbox" name="toggle" id="marker_toggle" class="form-check-input"> Marker</label>
     </div>
     <script>
-        var map = L.map('map').setView([-7.975256, 112.353800], 15);
+        var map = L.map('map').setView([-7.975256, 112.353800], 13);
 
         L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{
             maxZoom: 18,
@@ -52,11 +52,20 @@
         }).addTo(markerLayer);
 
         var polygon = L.polygon([
-            [-7.977858, 112.353150],
-            [-7.962408, 112.349892],
-            [-7.967297, 112.357639],
-            [-7.974474, 112.361358],
-            [-7.983258, 112.355842],
+            [-7.935874, 112.326419],
+            [-7.937390, 112.326381],
+            [-7.942026, 112.325379],
+            [-7.942599, 112.324919],
+            [-7.942899, 112.324441],
+            [-7.943927, 112.322184],
+            [-7.945442, 112.321132],
+            [-7.946904, 112.320930],
+            [-7.993262, 112.351942],
+            [-7.959860, 112.415970],
+            [-7.973938, 112.362682],
+            [-7.973637, 112.362920],
+            [-7.973592, 112.361769],
+            [-7.974524, 112.361368],
         ], {
             color: 'blue',
             fillColor: '#f03',
@@ -69,13 +78,15 @@
             position: 'bottomleft'
         }).addTo(map);
 
-        document.getElementById('border_toggle').addEventListener('change', function(e){
+        document.getElementById('polygon_toggle').addEventListener('change', function(e){
             if (e.target.checked) {
                 map.addLayer(polygonLayer)
             } else {
                 map.removeLayer(polygonLayer)
             }
-        })
+        });
+
+        document.getElementById()
 
     </script>
     <script
