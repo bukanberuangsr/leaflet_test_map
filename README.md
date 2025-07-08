@@ -1,4 +1,4 @@
-# Peta Desa Tulungrejo
+# Peta Digital Desa Tulungrejo
 
 ## Deskripsi proyek
 
